@@ -1,0 +1,33 @@
+@import '../../../Assets/styles/variables';
+@import '../../../Assets/styles/mixin';
+:root {
+    --PrimaryColor: hsl(26, 93%, 50%);
+    --HoverColor: hsl(26, 90%, 42%);
+    --whiteColor: hsl(0, 0%, 100%);
+    --blackColor: hsl(0, 0%, 18%);
+    --textColor: hsl(240, 1%, 48%);
+    --whiteColorDeam: hsl(0, 93%, 93%);
+    --greyBg: hsl(0, 0%, 96%);
+    --greyText: rgb(190, 190, 190);
+    --inputColor: hsl(330, 12%, 97%);
+}
+
+     .access__btn
+     {
+        width:100%;
+        margin: 0 auto;
+        margin-top: 10px;
+        padding: 10px 12px;
+        font-size:1.5rem;
+        @include styleButton();
+        background-color: var(--PrimaryColor);
+        border-radius: 4px;
+        b{
+            display:flex;
+            align-items: center;
+            justify-content: center;
+        }
+        &:hover{
+            background-color: var(--HoverColor);
+        }
+    }

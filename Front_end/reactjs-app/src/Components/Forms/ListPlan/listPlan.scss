@@ -1,0 +1,110 @@
+:root {
+    --PrimaryColor: hsl(26, 93%, 50%);
+    --HoverColor: hsl(26, 90%, 42%);
+    --whiteColor: hsl(0, 0%, 100%);
+    --blackColor: hsl(0, 0%, 18%);
+    --textColor: hsl(240, 1%, 48%);
+    --whiteColorDeam: hsl(0, 93%, 93%);
+    --greyBg: hsl(0, 0%, 96%);
+    --greyText: rgb(190, 190, 190);
+    --inputColor: hsl(330, 12%, 97%);
+}
+
+.formDiv {
+    background-color: rgba(194, 192, 192, 0.548);
+    .formContainer {
+        padding: 3rem;
+        width: 45%;
+
+        .headerForm {
+            // text-align: center;
+            // margin-bottom: 10px;
+            // background: var(--textColor);
+            // padding: 1.5rem;
+
+            .icon {
+                // Styles for the icon
+            }
+
+            span {
+                font-weight: 600;
+            }
+        }
+
+        .content {
+            max-height: 300px;
+            overflow-y: auto;
+
+            ul {
+                list-style-type: none;
+                padding: 0;
+                margin: 0;
+
+                li {
+                    padding: 10px;
+                    background-color: white;
+                    margin-bottom: 5px;
+                    border-radius: 5px;
+                    transition: background-color 0.3s;
+
+                    button {
+                        width: 100%;
+                        height: 100%;
+                        padding: 0;
+                        border: none;
+                        background-color: transparent;
+                        display: flex;
+                        align-items: center;
+                    }
+
+                    &:last-child {
+                        margin-bottom: 0;
+                    }
+
+                    &:hover {
+                        background-color: lightgray;
+                    }
+                }
+            }
+        }
+
+        .createTrip {
+            display: flex;
+            align-items: center;
+            width: 100%;
+
+            .createTripButton {
+                color: var(--whiteColor);
+                width: 100%;
+                background: var(--PrimaryColor);
+                border-radius: 2rem;
+                padding: .5rem;
+                border: none;
+                margin-top: 10px;
+
+                .icon-right {
+                    color: var(--whiteColor);
+                }
+
+                span {
+                    font-size: 20px;
+                    font-weight: 600;
+                }
+
+            }
+        }
+    }
+}
+
+.icon-right {
+    color: var(--PrimaryColor);
+    margin-right: 1rem;
+}
+
+.iconLarge {
+    font-size: 20px;
+}
+
+.taomoi{
+    color: var(--whiteColor);
+}

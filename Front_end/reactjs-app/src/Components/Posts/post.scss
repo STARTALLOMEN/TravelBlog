@@ -1,0 +1,14 @@
+.itemContentPost{
+    padding-bottom: 10px;
+}
+
+.secContainerPost {
+    margin-bottom: 2rem;
+    color: var(--textColor);
+    
+    .post {
+        border: .5px solid var(--textColor);
+        padding: 2rem;
+        border-radius: .7rem;
+    }
+}

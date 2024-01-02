@@ -1,0 +1,144 @@
+:root {
+    --PrimaryColor: hsl(26, 93%, 50%);
+    --HoverColor: hsl(26, 90%, 42%);
+    --whiteColor: hsl(0, 0%, 100%);
+    --blackColor: hsl(0, 0%, 18%);
+    --textColor: hsl(240, 1%, 48%);
+    --whiteColorDeam: hsl(0, 93%, 93%);
+    --greyBg: hsl(0, 0%, 96%);
+    --greyText: rgb(190, 190, 190);
+    --divBg: rgb(185, 182, 182);
+    --inputColor: hsl(330, 12%, 97%);
+}
+
+// .question{
+//     border: 1px solid var(--textColor);
+//     border-radius: 2rem;
+// }
+
+.secContainerQues {
+    //margin: 2rem;
+    margin-bottom: 2rem;
+    color: var(--textColor);
+    
+    .question {
+        border: .5px solid var(--textColor);
+        padding: 2rem;
+        border-radius: .7rem;
+
+        .user {
+            padding-top: 1rem;
+            align-items: flex-start; //ghi đè lên flex
+
+            span {
+                font-size: 20px;
+                font-weight: 500;
+                color: var(--blackColor);
+            }
+
+            img {
+                border-radius: 50%;
+                width: 40px;
+                height: 40px;
+                margin-right: 1rem;
+            }
+        }
+
+        .title {
+            font-size: 30px;
+            font-weight: 600;
+            color: var(--blackColor);
+        }
+    }
+
+    &:hover {
+        background: var(--greyBg);
+    }
+}
+.questionNew{
+    .title{
+        color: var(--PrimaryColor);
+        padding: 2rem 0rem;
+        .icon{
+            font-size: 30px;
+        }
+        span{
+            margin-left: 1rem;
+            font-size: 20px;
+            font-weight: 600;
+            border-bottom: 2px solid var(--PrimaryColor);
+        }
+    }
+}
+
+// .gridQues {
+//     grid-template-columns: repeat(5, 1fr);
+// }
+
+// .icon {
+//     font-size: 15px;
+// }
+
+.images {
+    padding-top: 1rem;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+
+    img {
+        padding: .5rem;
+    }
+}
+
+.text-container {
+    overflow: hidden;
+    position: relative;
+    line-height: 1.2em; // Điều chỉnh khoảng cách giữa các dòng
+    max-height: 3.6em; // Số dòng văn bản bạn muốn hiển thị trước khi cắt ngắn
+
+    span {
+        max-height: 3.6em;
+    }
+}
+
+.text-container::after {
+    content: ' ...'; // Hiển thị 3 chấm cuối đoạn cắt
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    padding-left: 20px; // Khoảng cách giữa chấm cuối và chữ "Xem thêm"
+    //background-color: white; // Màu nền để che phần cắt ngắn
+}
+
+.itemDivQues {
+    padding-bottom: 1rem;
+}
+
+.locationDiv {
+    background-color: var(--divBg);
+    color: var(--blackColor);
+    border-radius: 2rem;
+    margin: .7rem;
+    padding: .3rem 1rem;
+    text-align: center;
+}
+
+.stats{
+    .icon{
+        font-size: 25px;
+    }
+    .itemStat{
+        padding: .8rem;
+    }
+    span{
+        padding-left: .5rem;
+    }
+}
+
+.avatarCover{
+    height: 200px;
+    object-fit: cover
+}
+
+.dulich{
+    margin-top: 1rem;
+}

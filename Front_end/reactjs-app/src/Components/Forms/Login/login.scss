@@ -1,0 +1,74 @@
+//width: 568, height: 570, radius: 8
+@import '../../../assets/styles/variables';
+@import '../../../assets/styles/mixin';
+
+
+@include modalForm(600px);
+
+:root {
+    --PrimaryColor: hsl(26, 93%, 50%);
+    --HoverColor: hsl(26, 90%, 42%);
+    --whiteColor: hsl(0, 0%, 100%);
+    --blackColor: hsl(0, 0%, 18%);
+    --textColor: hsl(240, 1%, 48%);
+    --whiteColorDeam: hsl(0, 93%, 93%);
+    --greyBg: hsl(0, 0%, 96%);
+    --greyText: rgb(190, 190, 190);
+    --inputColor: hsl(330, 12%, 97%);
+}
+
+.modal__container
+{
+    height:100vh;
+    background-color: rgba(0,0,0,0.5);
+    position:fixed;
+    top:0;
+    right:0;
+    left:0;
+    bottom:0;
+    display:flex;
+    // transition: 1s;
+    z-index:3;
+}
+.layout__container
+{
+    transition: opacity 0.3s ease-in-out;
+
+    .layout__container-wrapper
+    {
+        // z-index:100 !important;
+        &>p{
+            margin-top: 30px;
+            font-size: 1.3rem;
+            color: #717171;
+            text-align: center;
+            a{
+                text-decoration: none;
+                color: #000000;
+            }
+        }
+        &>button
+        {
+            position:absolute;
+            right:10px;
+            top:10px;
+            font-size: 2rem;
+            padding:5px;
+            cursor:pointer;
+            background-color: transparent;
+            border:none;
+        }
+    }
+    span.line {
+        display:block;
+        margin: 16px 0 20px;
+        border-bottom: 1px solid #e8eaef;
+    }
+ }
+
+
+ 
+//------------------------------------RESPONSIVE---------------------------------
+@include ResponsiveLayout;
+
+

@@ -1,0 +1,73 @@
+:root {
+    --PrimaryColor: hsl(26, 93%, 50%);
+    --HoverColor: hsl(26, 90%, 42%);
+    --whiteColor: hsl(0, 0%, 100%);
+    --blackColor: hsl(0, 0%, 18%);
+    --textColor: hsl(240, 1%, 48%);
+    --whiteColorDeam: hsl(0, 93%, 93%);
+    --greyBg: hsl(0, 0%, 96%);
+    --greyText: rgb(190, 190, 190);
+    --inputColor: hsl(330, 12%, 97%);
+}
+
+.question {
+    .secContainer {
+        .secHeader {
+            .textDiv {
+                .secTitle {
+                    color: var(--blackColor);
+                    line-height: 1.5rem;
+                    padding-bottom: .5rem;
+                    font-size: 2.2rem;
+                }
+            }
+        }
+
+        .mainContent {
+            .singleQuestion {
+                .overlayInfo {
+                    padding-top: 2rem;
+
+                    .titleQues {
+                        p {
+                            font-size: 22px;
+                            font-weight: 600;
+                            color: var(--blackColor);
+                        }
+                    }
+
+                    .infoDiv {
+                        padding-top: 1rem;
+                        align-items: flex-start; //ghi đè lên flex
+
+                        img {
+                            border-radius: 50%;
+                            width: 40px;
+                            height: 40px;
+                        }
+
+                        .infoQues {
+                            background: var(--greyBg);
+                            border-radius: .5rem;
+                            margin-left: 1rem;
+                            padding: 1rem;
+                            .name{
+                                padding-bottom: .3rem;
+                                p{
+                                    color: var(--blackColor);
+                                    font-weight: 600;
+                                }
+                            }
+                            .contentQues{
+                                p{
+                                    color: var(--textColor);
+                                }
+                            }
+                        }
+
+                    }
+                }
+            }
+        }
+    }
+}

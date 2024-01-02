@@ -1,0 +1,208 @@
+:root {
+    --PrimaryColor: hsl(26, 93%, 50%);
+    --HoverColor: hsl(26, 90%, 42%);
+    --whiteColor: hsl(0, 0%, 100%);
+    --blackColor: hsl(0, 0%, 18%);
+    --textColor: hsl(240, 1%, 48%);
+    --whiteColorDeam: hsl(0, 93%, 93%);
+    --greyBg: hsl(0, 0%, 96%);
+    --greyText: rgb(190, 190, 190);
+    --inputColor: hsl(330, 12%, 97%);
+}
+
+input,
+textarea {
+    border: none;
+    width: 100%;
+    border-style: none;
+
+    &:focus {
+        outline: none;
+    }
+}
+
+textarea {
+    resize: none;
+    height: auto;
+    min-height: 50px;
+    overflow: visible;
+    /* Hiển thị toàn bộ nội dung vượt quá kích thước textarea */
+}
+
+.questionForm {
+    padding: 2rem;
+    min-height: 100vh;
+    background-color: rgba(194, 192, 192, 0.548);
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    //bottom:0;
+    z-index: 100;
+    height: auto;
+    overflow: auto;
+
+    .questionContainer {
+        box-shadow: 0 2px 8px 2px rgba(194, 192, 192, 0.548);
+        position: absolute;
+        top: 5rem;
+        padding: 1.5rem;
+        border: 1px solid var(--greyBg);
+        border-radius: .5rem;
+        //height: auto;
+        width: 60%;
+        left: 20%;
+        background: var(--whiteColor);
+
+        .headerDiv {
+            img {
+                border-radius: 50%;
+                width: 80px;
+                height: 80px;
+                margin-right: 1rem;
+            }
+
+            .contentDiv {
+                width: 100%;
+
+                .title {
+                    border-bottom: 1px solid var(--greyText);
+                }
+            }
+        }
+
+        .metadata {
+            width: 100%;
+            display: flex;
+            flex-wrap: wrap;
+        }
+    }
+
+}
+
+textarea {
+    resize: none;
+}
+
+.contentDiv {
+    .itemContentDiv {
+        padding: 1rem 0rem;
+    }
+}
+
+.listImage {
+
+    .img-boxitem {
+        position: relative;
+
+        .btn-close {
+            position: absolute;
+            right: 0;
+            z-index: 1;
+            font-size: 1rem;
+            border: none;
+            outline: none;
+        }
+    }
+}
+
+.listImage {
+    ul.photo__box {
+        padding-left: 0;
+        display: flex;
+        flex-wrap: wrap;
+        list-style-type: none;
+
+        // justify-content: center;
+        //align-items: flex-start;
+        li {
+            margin: 5px;
+            width: 20%;
+
+            .obj-photo {
+                border: 2px solid #ccc;
+                height: 200px;
+                width: 100%;
+                background-color: #f8f9fb;
+                position: relative;
+            }
+        }
+    }
+}
+
+.fileContainer {
+    display: inline-block;
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+    cursor: pointer;
+    border: 2px solid #ccc;
+    border-radius: 6px;
+    padding: 5px;
+    color: var(--textColor);
+}
+
+.iconImage {
+    font-size: 30px;
+    //margin-top: 20px;
+    margin-right: 20px;
+    color: #999;
+}
+
+.inputChooseFile {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    cursor: pointer;
+}
+
+/* Style the text inside the button */
+
+/* Style the button when a file is selected */
+.fileContainer input[type="file"]:valid+.iconImage::before,
+.fileContainer input[type="file"]:valid+.fileContainer::after {
+    color: #66c;
+}
+
+/* Style the button on hover */
+.fileContainer:hover {
+    background-color: #f5f5f5;
+}
+
+.itemContent {
+    margin-bottom: 2rem;
+}
+
+.locationDiv {
+    background-color: var(--divBg);
+    color: var(--blackColor);
+    border-radius: 2rem;
+    margin: .3rem;
+    padding: .3rem 1rem;
+    text-align: center;
+
+    .btn-close {
+        font-size: 13px;
+    }
+}
+
+
+//hiệu ứng
+.questionContainer {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.questionContainer.active {
+    opacity: 1;
+    transform: translateY(0);
+    transition: all 0.5s ease;
+}
+.btnSubmit:hover{
+    background: var(--blackColor);
+    color: var(--whiteColor);
+}

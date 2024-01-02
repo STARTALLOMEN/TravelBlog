@@ -1,0 +1,121 @@
+:root {
+    --PrimaryColor: hsl(26, 93%, 50%);
+    --HoverColor: hsl(26, 90%, 42%);
+    --whiteColor: hsl(0, 0%, 100%);
+    --blackColor: hsl(0, 0%, 18%);
+    --textColor: hsl(240, 1%, 48%);
+    --whiteColorDeam: hsl(0, 93%, 93%);
+    --greyBg: hsl(0, 0%, 96%);
+    --greyText: rgb(190, 190, 190);
+    --inputColor: hsl(330, 12%, 97%);
+}
+
+.accomRestr {
+    .secContainer {
+        .secHeader {
+            flex-direction: column;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .textDiv {
+            .secTitle {
+                color: var(--blackColor);
+                line-height: 1.5rem;
+                padding-bottom: .5rem;
+            }
+
+            p {
+                font-size: 13px;
+                color: var(--textColor);
+                font-weight: 500;
+            }
+        }
+
+        .mainContent {
+            padding: 2rem 0;
+            gap: 1rem;
+
+            .singleAccomRestr {
+                overflow: hidden;
+                border-radius: 1rem;
+                box-shadow: 0 2px 8px 2px rgba(102, 96, 96, 0.548);
+
+                .destImage {
+                    border-radius: 1rem;
+                    position: relative;
+
+                    img {
+                        height: 100%;
+                        object-fit: cover;
+                        border-radius: 1rem;
+                        height: 250px;
+                    }
+
+                    .bookmark {
+                        position: absolute;
+                        right: 0;
+                        top: 0;
+                        margin: 1rem;
+                        background: transparent;
+                        border: none;
+
+                        .icon {
+                            color: var(--PrimaryColor);
+                        }
+                    }
+
+                }
+
+                .destFooter {
+                    padding: 1rem;
+
+                    //margin-top: .5rem;
+                    .title {
+                        overflow: hidden;
+                        color: var(--blackColor);
+                        font-size: 15px;
+                    }
+
+                    .starReview {
+                        padding-top: .8rem;
+                        position: relative;
+
+                        .iconStar {
+                            color: var(--PrimaryColor);
+                            font-size: 1rem;
+                        }
+
+                        span {
+                            position: absolute;
+                            right: 0;
+                            top: 0;
+                            font-size: 13px;
+                            color: var(--textColor);
+                        }
+                    }
+
+                    .destDetination {
+                        padding-top: .8rem;
+                        font-size: 13px;
+                        color: var(--textColor);
+
+                        .iconDetina {
+                            font-size: 11px;
+                        }
+
+                        span {
+                            padding: .3rem;
+                        }
+                    }
+                }
+                &:hover {
+                    transform: translateY(-7px);
+                    transition: 1s ease;
+                }
+            }
+            
+        }
+
+    }
+}

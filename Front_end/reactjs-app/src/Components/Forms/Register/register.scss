@@ -1,0 +1,10 @@
+@import '../../../assets/styles/variables';
+@import '../../../assets/styles/mixin';
+
+#register
+{
+  @include modalForm(700px);
+
+  ///////----------------------RESPONSIVE-----------------------------
+  @include ResponsiveLayout;
+}

@@ -1,0 +1,44 @@
+:root {
+    --PrimaryColor: hsl(26, 93%, 50%);
+    --HoverColor: hsl(26, 90%, 42%);
+    --whiteColor: hsl(0, 0%, 100%);
+    --blackColor: hsl(0, 0%, 18%);
+    --textColor: hsl(240, 1%, 48%);
+    --whiteColorDeam: hsl(0, 93%, 93%);
+    --greyBg: hsl(0, 0%, 96%);
+    --greyText: rgb(190, 190, 190);
+    --inputColor: hsl(330, 12%, 97%);
+}
+
+.addDestinationPage {
+    .navBarSection {
+        background: var(--greyText);
+        height: 74px;
+    }
+}
+
+.select-label {
+    font-weight: 600;
+    color: var(--textColor);
+    margin-bottom: 8px;
+    margin-right: 1rem;
+}
+
+.select-box {
+    // margin-left: 1rem;
+    padding: 8px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 200px;
+    margin-right: 1rem;
+}
+
+.selected-option {
+    margin-top: 8px;
+}
+.titleLocation{
+    color: var(--textColor);
+    font-weight: 600;
+    margin-right: 2rem;
+}

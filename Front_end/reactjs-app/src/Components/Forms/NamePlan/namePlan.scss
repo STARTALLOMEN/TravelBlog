@@ -1,0 +1,92 @@
+:root {
+    --PrimaryColor: hsl(26, 93%, 50%);
+    --HoverColor: hsl(26, 90%, 42%);
+    --whiteColor: hsl(0, 0%, 100%);
+    --blackColor: hsl(0, 0%, 18%);
+    --textColor: hsl(240, 1%, 48%);
+    --whiteColorDeam: hsl(0, 93%, 93%);
+    --greyBg: hsl(0, 0%, 96%);
+    --greyText: rgb(190, 190, 190);
+    --inputColor: hsl(330, 12%, 97%);
+}
+
+.input input {
+    border: 1px solid #ccc;
+    padding: 10px;
+    font-size: 16px;
+}
+
+.formDiv {
+    .formContainerNamePlan {
+        padding: 3rem;
+        width: 45%;
+        .headerForm{
+            span {
+                font-weight: 600;
+            }
+        }
+        // background-color: var(--whiteColor);
+    }
+}
+
+.chooseType {
+    .titleContent {
+        font-size: 15px;
+        font-weight: 600;
+        color: var(--blackColor);
+        margin-bottom: .5rem;
+    }
+}
+
+.item {
+    .icon-right {
+        margin-left: 1rem;
+        font-size: 30px;
+    }
+
+    .itemContent {
+        .contentspan {
+            color: var(--textColor);
+            font-size: 15px;
+        }
+    }
+}
+
+.create {
+    display: flex;
+    align-items: center;
+    justify-content: right;
+
+    .createButton {
+        color: var(--whiteColor);
+        // width: 100%;
+        background: var(--PrimaryColor);
+        border-radius: 2rem;
+        padding: .5rem 1rem;
+        width: 8rem;
+        border: none;
+
+        .icon {
+            color: var(--whiteColor);
+        }
+
+        span {
+            font-size: 20px;
+            font-weight: 600;
+        }
+
+    }
+}
+
+.titleItemContent {
+    font-weight: 600;
+    font-size: 15px;
+}
+
+.icon-right{
+    color: var(--PrimaryColor);
+    margin-right: 1rem;
+}
+.iconLarge {
+    font-size: 30px;
+}

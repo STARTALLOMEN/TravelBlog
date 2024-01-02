@@ -1,0 +1,81 @@
+.car__photo{
+    width:100%;
+    max-width: 670px;
+    .img-boxitem
+    {
+        position:relative;
+        .btn-close
+        {
+            position:absolute;
+            right:0;
+            z-index: 1;
+            font-size: 1rem;
+            border:none;
+            outline:none;
+        }
+    }
+    .obj-photo.hide{
+        display:none;
+    }
+    .photo-avatar.hide{
+        display:none;
+    }
+    .obj-photo
+    {
+        height:200px;
+        width:50%;
+        background-color: #f8f9fb;
+        position:relative;
+        .ins {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            text-align: center;
+            transform: translate(-50%,-50%);
+        }
+        .fileUploader{
+            width: 100%;
+            .file-container{
+                box-shadow: none;
+                background: transparent;
+                position: relative;
+                border-radius: 10px;
+                padding: 20px 0;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-direction: column;
+                margin: 10px auto;
+                transition: all .3s ease-in;
+            }
+            
+        }
+    }
+}
+
+.car__photo
+{
+    ul.photo__box{
+        padding-left:0;
+        display:flex;
+        flex-wrap:wrap;
+        list-style-type: none;
+        justify-content: center;
+        li{
+            margin: 5px;
+            width:45%;
+            .obj-photo{
+                border: 2px solid #ccc;
+                width:100%;
+            }
+        }
+    }
+    input[type="file"] {
+        // opacity:0;
+        position: absolute;
+        width: 100%;
+        padding: 9px 19px;
+       cursor: pointer;
+
+    }
+}
