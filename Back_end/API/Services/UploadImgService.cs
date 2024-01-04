@@ -10,10 +10,10 @@ namespace API.Services
 {
     public class UploadImgService : IUploadImgService
     {
-        private static string apiKey = "AIzaSyDRmDLsCeXOkGEtkhRbl2YbXfgwxN-1suA";
-        private static string Bucket = "vntravel-e1b63.appspot.com";
-        private static string AuthEmail = "haiyen0104xuanlong@gmail.com";
-        private static string AuthPassword = "01042001";
+        private static string apiKey = "AIzaSyBrr9-SaiyUXlgLycpztqL1vkNt6959JDU";
+        private static string Bucket = "travel-c5a40.appspot.com";
+        private static string AuthEmail = "21521576@gm.uit.edu.vn";
+        private static string AuthPassword = "1013240898";
         public async Task<string> UploadImage(string folder,string username,IFormFile model)
         {
             string projectPath = System.Environment.CurrentDirectory;

@@ -62,9 +62,9 @@ function Footer () {
                 </div>
                 <div className="footerLinks">
                     <span className="linkTitle">Liên hệ</span>
-                    <span className='phone'>0902.456.101</span>
-                    <span className='email'>gody@gmail.com</span>
-                    <span className='facebook'>facebook.com/GodyTravel</span>
+                    <span className='phone'>0931.547479</span>
+                    <span className='email'>21521576@gm.uit.edu.vn</span>
+                    <span className='school'>UIT </span>
                 </div>
             </div>
         </div>

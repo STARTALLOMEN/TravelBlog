@@ -64,7 +64,9 @@ services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
                 Encoding.UTF8.GetBytes(builder.Configuration["TokenKey"]))
         };
     });
-    //.AddMicrosoftIdentityWebApi(builder.Configuration.GetSection("AzureAd"));
+//services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
+//    .AddMicrosoftIdentityWebApi(builder.Configuration.GetSection("AzureAd"));
+
 
 builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme);
 
@@ -114,29 +116,29 @@ catch (Exception ex)
     var logger = serviceProvider.GetRequiredService<ILogger<Program>>();
     logger.LogError(ex, "Migration Failed");
 }
-// try
-// {
-//     var context = serviceProvider.GetRequiredService<DataContext>();
-//     context.Database.Migrate();
-//     Seed.SeedDictrict(context);
-// }
-// catch (Exception ex)
-// {
-//     var logger = serviceProvider.GetRequiredService<ILogger<Program>>();
-//     logger.LogError(ex, "Migration Failed");
-// }
+ //try
+ //{
+ //    var context = serviceProvider.GetRequiredService<DataContext>();
+ //    context.Database.Migrate();
+ //    Seed.SeedDictrict(context);
+ //}
+ //catch (Exception ex)
+ //{
+ //    var logger = serviceProvider.GetRequiredService<ILogger<Program>>();
+ //    logger.LogError(ex, "Migration Failed");
+ //}
 
-// try
-// {
-//     var context = serviceProvider.GetRequiredService<DataContext>();
-//     context.Database.Migrate();
-//     Seed.SeedWard(context);
-// }
-// catch (Exception ex)
-// {
-//     var logger = serviceProvider.GetRequiredService<ILogger<Program>>();
-//     logger.LogError(ex, "Migration Failed");
-// }
+ //try
+ //{
+ //    var context = serviceProvider.GetRequiredService<DataContext>();
+ //    context.Database.Migrate();
+ //    Seed.SeedWard(context);
+ //}
+ //catch (Exception ex)
+ //{
+ //    var logger = serviceProvider.GetRequiredService<ILogger<Program>>();
+ //    logger.LogError(ex, "Migration Failed");
+ //}
 
 
 app.UseSwagger();

@@ -19,7 +19,6 @@ namespace API.Controllers
             _userService = userService;
         }
 
-
         [HttpGet]
         public ActionResult<IEnumerable<UserDto>> Get()
         {
@@ -89,7 +88,7 @@ namespace API.Controllers
         {
             try
             {
-                var username = this.User.FindFirst(ClaimTypes.NameIdentifier).Value;
+                var username = User.FindFirst(ClaimTypes.NameIdentifier).Value;
                 var plan = _userService.GetPLanByUserId(username);
                 MessageReturn success = new MessageReturn()
                 {

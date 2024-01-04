@@ -120,19 +120,6 @@ namespace API.Data
             base.OnModelCreating(modelBuilder);
         }
 
-        // protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-        // {
-        // //string connectionString = "Server=serverhaiyen.mysql.database.azure.com; Port=3306; Database=RentalCarDatabase; Uid=haiyen@serverhaiyen; Pwd=#Hthy01042001; SslMode=Preferred;";
-        // //var serverVersion = new MySqlServerVersion(new Version(8, 0, 29));
-        // ////var serverVersion = new MySqlServerVersion(new Version(5, 7, 0));
-        // //optionsBuilder
-        // //    .UseMySql(connectionString, serverVersion)
-        // //    .LogTo(Console.WriteLine, LogLevel.Information)
-        // //    .EnableSensitiveDataLogging()
-        // //    .EnableDetailedErrors();
-
-        //    string connectionString = "Server=localhost; Database=DestinationBlog;Trusted_Connection=True;TrustServerCertificate=True;User ID=sa; Password=01042001";
-        //    optionsBuilder.UseSqlServer(connectionString);
-        // }
+        
     }
 }

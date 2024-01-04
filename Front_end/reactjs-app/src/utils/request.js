@@ -1,10 +1,12 @@
 import axios from 'axios'
 
 const userToken = localStorage.getItem('userToken')
+console.log('userToken exists:', Boolean(userToken));
+console.log('userToken value:', userToken);
 
 // console.log(userToken)
 const request = axios.create({
-    baseURL: 'https://localhost:7101/api/'
+    baseURL: 'https://localhost:7101/api',
 })
 
 //METHOD GET

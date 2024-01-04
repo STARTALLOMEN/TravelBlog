@@ -4,6 +4,7 @@
     <TargetFramework>net6.0</TargetFramework>
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
+    <UserSecretsId>c95deef3-d44d-492c-94e3-708a084da9ad</UserSecretsId>
   </PropertyGroup>
 
   <ItemGroup>
