@@ -8,8 +8,8 @@ namespace API.Models
 {
     public class BlogAdd
     {
-        public string Title { get; set; }
-        public IFormFile ImgAvatarFile { get; set; }
+        public string? Title { get; set; }
+        public IFormFile? ImgAvatarFile { get; set; }
         public string? ShortDecription { get; set; }
         public string? Content { get; set; }
         public DateTime? DateStart { get; set; }

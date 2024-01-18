@@ -77,7 +77,7 @@ const router = createBrowserRouter([
     element:<MarkDestination/>
   },
   {
-    path:"/kk",
+    path:"/profile",
     element:<ProfileUser/>
   }
 

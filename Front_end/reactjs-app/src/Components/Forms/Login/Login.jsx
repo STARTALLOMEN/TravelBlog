@@ -7,6 +7,7 @@ import * as yup from 'yup';
 import { useForm } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
 import { useState } from 'react';
+
 //import {useNavigate} from 'react-router-dom'
 import request from '../../../utils/request';
 function Login(props) {
@@ -21,6 +22,33 @@ function Login(props) {
     });
     const { register, handleSubmit, formState: { errors } } = useForm({ resolver: yupResolver(schema) });
     const [isLogin, setIsLogin] = useState(null)
+    const [email, setEmail] = useState('');
+    const [showForgotPasswordForm, setShowForgotPasswordForm] = useState(false);
+    const handleForgotPassword = () => {
+        setShowForgotPasswordForm(true);
+      };
+    
+      const handleResetPassword = (event) => {
+        event.preventDefault();
+        // Add your reset password logic here
+        try {
+            // Replace with your actual API endpoint
+            const res = request.post('Auth/forgotPassword', { email });
+            if (res.status === 200) {
+              alert('An email has been sent to your email address');
+              setShowForgotPasswordForm(false);
+              setEmail('');
+            } else {
+              alert('Something went wrong');
+            }
+          } catch (error) {
+            console.error(error);
+          }
+      };
+    
+      const handleEmailChange = (event) => {
+        setEmail(event.target.value);
+      };
     const onSubmit = async (data) => {
         // try {
         const dataUser = {
@@ -51,7 +79,7 @@ function Login(props) {
 
                             <div className="input__wrapper">
                                 <BiUserCheck width={35} size={35} />
-                                <input type="text" {...register('userName')} placeholder='Your username' id='username' />
+                                <input type="text" {...register('userName')} placeholder='Your username' id='userName' />
                             </div>
                             {errors.userName ? <p className='error_messages'>Vui lòng nhập username!</p> : ''}
                             <p className='error_messages'></p>
@@ -62,7 +90,13 @@ function Login(props) {
                             {errors.password ? <p className='error_messages'>Vui lòng nhập password!</p> : ''}
                             {isLogin ? <p className='error_messages'>{isLogin}</p> : ''}
                         </div>
-                        <p><button>Quên mật khẩu?</button></p>
+                        <p><button onClick={handleForgotPassword}>Quên mật khẩu?</button></p>
+                        {showForgotPasswordForm && (
+                            <form onSubmit={handleResetPassword}>
+                                <input type="email" placeholder="Email" value={email} onChange={handleEmailChange} />
+                                <button type="submit">Gửi email</button>
+                            </form>
+                        )}
                         <ButtonAccess namebtn='ĐĂNG NHẬP' onHandleSubmit={handleSubmit(onSubmit)} />
 
                     </form>

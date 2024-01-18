@@ -26,8 +26,10 @@ function Register(props) {
 
     const phoneRegExp = /(((\+|)84)|0)(3|5|7|8|9)+([0-9]{8})\b/;
     const schema = yup.object().shape({
-        yourName: yup.string().required('You have to enter your Name!'),
+        firstName: yup.string().required('You have to enter your firstName!'),
+        lastName: yup.string().required('You have to enter your lastName!'),
         userName: yup.string().required('You have to enter your username!'),
+        email: yup.string().required('You have to enter your email!'),
         password: yup.string().required('You have to enter your password!').min(5, 'Your password must be at least 5 character!'),
         confirmPassword: yup.string().required('Please enter your confirm password!'),
         phone: yup.string().required('Enter your phone number').matches(
@@ -40,11 +42,13 @@ function Register(props) {
         // e.preventDefault()
         console.log('hello')
         const newData = {
-            firstname: data.firstname,
-            lastName: data.lastname,
+            firstName: data.firstName,
+            lastName: data.lastName,
             userName: data.userName,
             password: data.password,
             confirmPassword: data.confirmPassword,
+            phone: data.phone,
+            email: data.email
         }
         console.log(newData)
         try {
@@ -77,14 +81,14 @@ function Register(props) {
                             <div className="wrapper">
                                 <div className="input__wrapper">
                                     <FiUser width={27} size={27} />
-                                    <input type='text' {...register('firstname')} placeholder='First Name' id='fullname' />
+                                    <input type='text' {...register('firstName')} placeholder='First Name' id='firstName' />
                                 </div>
-                                {errors.firstname ? <p className='error_messages'>{errors.yourName.message}</p> : ''}
+                                {errors.firstName ? <p className='error_messages'>{errors.firstName.message}</p> : ''}
                                 <div className="input__wrapper">
                                     <FiUser width={27} size={27} />
-                                    <input type='text' {...register('lastname')} placeholder='Last Name' id='fullname' />
+                                    <input type='text' {...register('lastName')} placeholder='Last Name' id='lastName' />
                                 </div>
-                                {errors.lastname ? <p className='error_messages'>{errors.yourName.message}</p> : ''}
+                                {errors.lastName ? <p className='error_messages'>{errors.lastName.message}</p> : ''}
                                 <div className="input__wrapper">
                                     <BiUserCheck width={30} size={30} />
                                     <input type="text" {...register('userName')} placeholder='Your Username' id='username' />
@@ -101,16 +105,16 @@ function Register(props) {
                                     <input type="text" {...register('confirmPassword')} placeholder='Confirm password' id='confirmpassword' name='confirmPassword' />
                                 </div>
                                 {errors.confirmPassword ? <p className='error_messages'>{errors.confirmPassword.message}</p> : ''}
-                                {/* <div className="input__wrapper">
+                                <div className="input__wrapper">
                                     <BiPhone width={30} size={24} />
                                     <input type="text" {...register('phone')} placeholder='Phone number' id='phone' name='phone' />
                                 </div>
                                 {errors.phone ? <p className='error_messages'>{errors.phone.message}</p> : ''}
-                                {isValidUser ? <p className='error_messages'>{isValidUser}</p> : ''} */}
-                                {/* <div className="input__wrapper">
+                                {isValidUser ? <p className='error_messages'>{isValidUser}</p> : ''} 
+                                 <div className="input__wrapper">
                                     <AiOutlineMail width={30} size={24} />
-                                    <input type="text" {...register('email')} placeholder='Email' id='phone' name='phone' />
-                                </div> */}
+                                    <input type="text" {...register('email')} placeholder='Email' id='email' name='email' />
+                                </div> 
                             </div>
                             <ButtonAccess namebtn='ĐĂNG KÝ' onHandleSubmit={handleSubmit(onSubmit)} />
                         </form>

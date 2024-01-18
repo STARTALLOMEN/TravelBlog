@@ -17,5 +17,7 @@ namespace API.Services
         void CreatePan(PlanAdd Plan, string username);
         List<PlanDto>? GetPLanByUserId(string username);
         void CreatePlanDestination(int planId, int desId);
+        //Task<User> FindByEmailAsync(string email);
+        //Task<string> GeneratePasswordResetTokenAsync(User user);
     }
 }

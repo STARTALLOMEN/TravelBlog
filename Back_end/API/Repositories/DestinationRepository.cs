@@ -123,7 +123,7 @@ namespace API.Repositories
             var top10Destinations = _context.Destinations
                                     .Include(m => m.Province)
                                     .OrderByDescending(t => t.View)
-                                    .Take(5)
+                                    .Take(10)
                                     .ToList();
 
             return top10Destinations;
@@ -145,7 +145,7 @@ namespace API.Repositories
             var top10Destinations = _context.Destinations.Where(p => p.TypeDestinationId == 2)
                                     .Include(m => m.Province)
                                     .OrderByDescending(t => t.View)
-                                    .Take(3)
+                                    .Take(10)
                                     .ToList();
 
             return top10Destinations;

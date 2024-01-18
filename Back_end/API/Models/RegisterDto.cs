@@ -20,13 +20,13 @@ namespace API.Models
         [MinLength(6, ErrorMessage = "Password phải có ít nhất 6 ký tự")]
         public string ConfirmPassword { set; get; }
 
-    //     [Phone]
-    //     [Required(ErrorMessage = "Bạn cần nhập số điện thoại.")]
-    //     public string Phone { set; get; }
+        [Phone]
+        [Required(ErrorMessage = "Bạn cần nhập số điện thoại.")]
+        public string Phone { set; get; }
 
-    //     [EmailAddress]
-    //     [Required(ErrorMessage = "Bạn cần nhập email.")]
-    //     public string Email { set; get; }
+        [EmailAddress]
+        [Required(ErrorMessage = "Bạn cần nhập email.")]
+        public string Email { set; get; }
     }
 }
 

@@ -47,6 +47,8 @@ services.AddScoped<IReviewDestinationRepository, ReviewDestinationRepository>();
 services.AddScoped<IReviewDestinationService, ReviewDestinationService>();
 services.AddScoped<IUploadImgService, UploadImgService>();
 services.AddAutoMapper(typeof(AutoMappingConfiguration).Assembly);
+services.AddScoped<EmailSevice>(); // Change to EmailService
+
 // services.AddScoped<UserManager<User>, UserManager<User>>();
 // services.AddScoped<SignInManager<User>, SignInManager<User>>();
 
@@ -64,8 +66,7 @@ services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
                 Encoding.UTF8.GetBytes(builder.Configuration["TokenKey"]))
         };
     });
-//services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
-//    .AddMicrosoftIdentityWebApi(builder.Configuration.GetSection("AzureAd"));
+
 
 
 builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme);

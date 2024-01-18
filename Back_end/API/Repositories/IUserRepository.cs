@@ -23,5 +23,6 @@ namespace API.Repositories
         List<User>? GetAllUser();
 
         bool UpdateUser(User user);
+
     }
 }

@@ -34,7 +34,7 @@ namespace API.Mapping
                     .ForMember(dest => dest.DestinationDtos, opt => opt.MapFrom(src => src.PlanDestinations.Select(pd => pd.Destination)));
 
             CreateMap<ImageQuestion, ImageQuestionDto>();
-            // CreateMap<Destination, DesDto>();
+            CreateMap<Destination, DesDto>();
 
             CreateMap<QuestionDestination, DestinationDto>()
                     .ForMember(dest => dest.Id, opt => opt.MapFrom(src => src.Destination.Id))

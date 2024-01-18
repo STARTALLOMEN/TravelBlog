@@ -12,7 +12,7 @@ namespace API.Services
 {
     public class UserService : IUserService
     {
-        private readonly IUserRepository _repository;
+        private readonly IUserRepository _repository;                                                                                                                                                                                               
         private readonly IMapper _mapper;
         public UserService(IUserRepository repository, IMapper mapper)
         {
@@ -94,5 +94,6 @@ namespace API.Services
         {
             _repository.CreatePlanDestination(planId,desId);
         }
+
     }
 }

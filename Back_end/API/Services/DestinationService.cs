@@ -49,10 +49,10 @@ namespace API.Services
             return desmap;
         }
 
-        // public DestinationDto? GetDestinationByName(string name)
-        // {
-        //     return _mapper.Map<Destination, DestinationDto>(_repository.GetDestinationByName(name));
-        // }
+        public DestinationDto? GetDestinationByName(string name)
+        {
+            return _mapper.Map<Destination, DestinationDto>(_repository.GetDestinationByName(name));
+        }
 
         public List<Destination>? GetDestinationByWardId(int wardId)
         {
@@ -78,7 +78,14 @@ namespace API.Services
         {
             var des = _repository.GetDestinationProvinceByProId(id);
             var desmap = _mapper.Map<Destination, DestinationDto>(des);
-            desmap.UserDto = _mapper.Map<User, UserDto>(des.User);
+            if (des.User != null)
+            {
+                desmap.UserDto = _mapper.Map<User, UserDto>(des.User);
+            }
+            else
+            {
+                Console.WriteLine("Error: des.User is null");
+            }
             return desmap;
         }
 
@@ -91,7 +98,7 @@ namespace API.Services
         {
             var listDestination = _repository.GetDestinationsOfProvice(provinceId);
             List<DestinationDto> destinationsOfProvince = new List<DestinationDto>();
-            // List<DestinationDto> destinationsOfProvince =  _mapper.Map<List<Destination>, List<DestinationDto>>(listDestination);
+            //List<DestinationDto> destinationsOfProvince = _mapper.Map<List<Destination>, List<DestinationDto>>(listDestination);
             foreach (var Destination in listDestination)
             {
                 var des = _mapper.Map<Destination, DestinationDto>(Destination);

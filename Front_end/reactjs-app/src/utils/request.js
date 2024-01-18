@@ -9,19 +9,25 @@ const request = axios.create({
     baseURL: 'https://localhost:7101/api',
 })
 
+request.interceptors.request.use(function (config) {
+    const token = localStorage.getItem('userToken');
+    if (token) {
+        config.headers.Authorization = `Bearer ${token}`;
+    } else {
+        console.error('No user token found');
+    }
+    return config;
+});
+
+//METHOD GET
 //METHOD GET
 export const getWithToken = async (path) => {
-    // console.log(userToken)
+    const userToken = localStorage.getItem('userToken')
     if (userToken) {
-        const response = await request.get(path,
-            {
-                headers:
-                {
-                    'Content-Type': 'application/json',
-                    'Authorization': `Bearer ${userToken}`
-                }
-            })
-        return response.data
+        const response = await request.get(path);
+        return response;
+    } else {
+        console.error('No user token found');
     }
 }
 
@@ -31,17 +37,17 @@ export const get = async (path, option = {}) => {
 }
 
 //METHOD DELETE
-// export const deleteById = async(path) =>
-// {
-//     if(userToken)
-//     {
-//         const response = await request.delete(path,
-//             {headers:{
-//                 'Authorization': `Bearer ${userToken}`,}
-//             })
-//         return response.data
-//     }
-// }
+export const deleteById = async(path) =>
+{
+    if(userToken)
+    {
+        const response = await request.delete(path,
+            {headers:{
+                'Authorization': `Bearer ${userToken}`,}
+            })
+        return response.data
+    }
+}
 
 // METHOD PATCH
 export const patch = async (path, data) => {
@@ -154,4 +160,3 @@ export const postWithFormData = async (path, data) => {
     return response.data
 }
 export default request;
-
