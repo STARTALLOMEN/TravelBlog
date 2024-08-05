@@ -3,8 +3,8 @@
     "",
     "\\Back_end",
     "\\Back_end\\API",
-    "\\Back_end\\API\\Controllers",
-    "\\Back_end\\API\\Migrations"
+    "\\Front_end",
+    "\\Front_end\\reactjs-app"
   ],
   "SelectedNode": "\\Back_end\\API\\API.sln",
   "PreviewInSolutionExplorer": false
